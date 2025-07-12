@@ -6,56 +6,81 @@
     <title>Student Data</title>
     <style>
         body {
-            background-color: #f0f0f0; /* Light gray background */
-            color: #333; /* Dark gray text */
-            font-family: Arial, sans-serif; /* Use Arial font */
+            background: linear-gradient(to right, #e0f7fa, #f1f8e9); /* Soft gradient */
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
         }
 
         h1 {
-            color: #007bff; /* Blue heading text */
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         .container {
-            max-width: 600px; /* Limit width to 600px */
-            margin: 0 auto; /* Center the container */
-            padding: 20px; /* Add padding */
-            background-color: #fff; /* White background */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow */
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: inline-block;
         }
 
         input[type="text"], input[type="submit"] {
             width: 100%;
-            padding: 10px;
-            margin: 5px 0;
+            padding: 12px;
+            margin-top: 5px;
+            margin-bottom: 15px;
             box-sizing: border-box;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 1rem;
         }
 
         input[type="submit"] {
-            background-color: #007bff; /* Blue submit button */
-            color: #fff; /* White text */
-            cursor: pointer; /* Add pointer cursor */
+            background-color: #007bff;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
         input[type="submit"]:hover {
-            background-color: #0056b3; /* Darker blue on hover */
+            background-color: #0056b3;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 20px;
+            background-color: #fafafa;
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         th, td {
-            padding: 8px;
+            padding: 12px 15px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid #e0e0e0;
         }
 
         th {
-            background-color: #f2f2f2; /* Light gray header background */
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        #studentSaved {
+            font-weight: bold;
+            color: green;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -74,13 +99,11 @@
         <label for="age">Age:</label><br>
         <input type="text" name="age" id="age"><br>
         
-        <br>
         <input type="submit" id="savestudent" value="Save Student Data">
         <p id="studentSaved"></p>
         
-        <br>
         <input type="submit" id="getstudents" value="View all Students">
-        <br><br>
+
         <div id="showStudents">
             <table id="studentTable">
                 <colgroup>
